@@ -46,18 +46,24 @@ Portanto:
 
 Nesta etapa será adicionada uma nova entrada para representar outro mapa como grafo e verificar uma nova saída.
 
-Entrada : 
- -> 7 10
-  ##########
-  #..#.....#
-  #..#..#..#
-  ####..#..#
-  #........#
-  #.########
-  #........#
+### Entrada
 
-Saída Esperada :
- -> 2
+```text
+7 10
+##########
+#..#.....#
+#..#..#..#
+####..#..#
+#........#
+#.########
+#........#
+```
+
+### Saída Esperada
+
+```text
+2
+```
 
 ## Representação com Grafo 
  
