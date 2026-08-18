@@ -248,7 +248,7 @@ Imagem da questão original:
 
 A partir do mapa, cada quadrado de chão foi transformado em um vértice e foram adicionadas arestas entre os quadrados que possuem movimentação direta entre si.
 
-![Grafo da questão](ImgTrab1/grafo1Questao.png)
+![Grafo da questão](ImgTrab1/grapho1Questao.png)
 
 ### 6. Conclusão
 
@@ -269,7 +269,7 @@ Essa modelagem também permite utilizar algoritmos de busca em grafos, como **DF
 
 A partir do mapa, cada quadrado de chão foi transformado em um vértice e foram adicionadas arestas entre os quadrados que possuem movimentação direta entre si.
 
-![Grafo da questão](ImgTrab1/grafo1Questao.png)
+![Grafo da questão](ImgTrab1/grapho1Questao.png)
 
 ### 6. Conclusão
 
@@ -290,7 +290,7 @@ Essa modelagem também permite utilizar algoritmos de busca em grafos, como **DF
 
 A partir do mapa, cada quadrado de chão foi transformado em um vértice e foram adicionadas arestas entre os quadrados que possuem movimentação direta entre si.
 
-![Grafo da questão](ImgTrab1/grafo1Questao.png)
+![Grafo da questão](ImgTrab1/grapho1Questao.png)
 
 ### 6. Conclusão
 
@@ -311,7 +311,7 @@ Essa modelagem também permite utilizar algoritmos de busca em grafos, como **DF
 
 A partir do mapa, cada quadrado de chão foi transformado em um vértice e foram adicionadas arestas entre os quadrados que possuem movimentação direta entre si.
 
-![Grafo da questão](ImgTrab1/grafo1Questao.png)
+![Grafo da questão](ImgTrab1/grapho1Questao.png)
 
 ### 6. Conclusão
 
