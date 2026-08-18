@@ -61,7 +61,7 @@ Saída Esperada :
 
 ## Representação com Grafo 
  
-![Grafo da questão](ImgTrab1/grapho1Questao.png)
+![Grafo da questão](ImgTrab1/GrafoProblemaNovo.png)
 
 * **Quantidade de subgrafos:** 2
 * **Quantidade de cômodos:** 2
