@@ -45,3 +45,24 @@ Portanto:
 ## 4. Nova Entrada
 
 Nesta etapa será adicionada uma nova entrada para representar outro mapa como grafo e verificar uma nova saída.
+
+Entrada : 
+ -> 7 10
+  ##########
+  #..#.....#
+  #..#..#..#
+  ####..#..#
+  #........#
+  #.########
+  #........#
+
+Saída Esperada :
+ -> 2
+
+## Representação com Grafo 
+ 
+![Grafo da questão](ImgTrab1/grapho1Questao.png)
+
+* **Quantidade de subgrafos:** 2
+* **Quantidade de cômodos:** 2
+* **Saída esperada:** `2`
