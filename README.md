@@ -79,4 +79,4 @@ Nesta etapa será adicionada uma nova entrada para representar outro mapa como g
 
 Aqui iremos mostrar a Matriz de Adjacência que constitui em uma matriz quadrada que os vértices compõe cada linha e cada coluna, e cada posição Xij representa a conexão/ligação dos respectivos vértices 
 
-![Grafo da questão](ImgTrab1/.png)
+![Grafo da questão](ImgTrab1/MatrizAdjacencia.png)
