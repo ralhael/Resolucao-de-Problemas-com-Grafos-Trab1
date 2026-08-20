@@ -87,4 +87,4 @@ Aqui iremos mostrar a Matriz de Adjacência que constitui em uma matriz quadrada
 
 Aqui iremos mostrar a Lista de Adjacência que constitui em uma lista que cada posição é um vértice do grafo , e em cada posição tem outra lista com todos os outros vértices que fazem conexão diretamente com ele
 
-![Lista de adjacencia](ImgTrab1/listaAdjacencia.png)
+![Matriz de Adjacencia](ImgTrab1/MatrizAdjacencia.png)
