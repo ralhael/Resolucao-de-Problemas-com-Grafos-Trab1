@@ -79,4 +79,12 @@ Nesta etapa será adicionada uma nova entrada para representar outro mapa como g
 
 Aqui iremos mostrar a Matriz de Adjacência que constitui em uma matriz quadrada que os vértices compõe cada linha e cada coluna, e cada posição Xij representa a conexão/ligação dos respectivos vértices 
 
-![Grafo da questão](ImgTrab1/MatrizAdjacencia.png)
+![Matriz de Adjacencia](ImgTrab1/MatrizAdjacencia.png)
+
+---
+
+## 6. Lista de Adjacência do Grafo Problema 1
+
+Aqui iremos mostrar a Lista de Adjacência que constitui em uma lista que cada posição é um vértice do grafo , e em cada posição tem outra lista com todos os outros vértices que fazem conexão diretamente com ele
+
+![Lista de adjacencia](ImgTrab1/.png)
