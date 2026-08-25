@@ -75,6 +75,10 @@ Nesta etapa será adicionada uma nova entrada para representar outro mapa como g
 
 ---
 
+## MARCO 2
+
+---
+
 ## 5. Matriz de Adjacência do Grafo Problema 1
 
 Aqui iremos mostrar a Matriz de Adjacência que constitui em uma matriz quadrada que os vértices compõe cada linha e cada coluna, e cada posição Xij representa a conexão/ligação dos respectivos vértices 
@@ -83,7 +87,7 @@ Aqui iremos mostrar a Matriz de Adjacência que constitui em uma matriz quadrada
 
 
   * Positivo: Nesse modelo a matriz de adjacência tem uma facilidade de encontrar se dois vértices possuem ligação, basta consultar M[i,j]. 
-  * Negativo: Se torna inviável visto que o consumo de memoria é muito alto para que o armazenamento da maioria das posições da matriz sejam 0 já que possuem apenas 4 vizinhos no máaximo.
+  * Negativo: Se torna inviável visto que o consumo de memoria é muito alto para que o armazenamento da maioria das posições da matriz sejam 0 já que possuem apenas 4 vizinhos no máximo.
 
 ---
 
@@ -93,5 +97,9 @@ Aqui iremos mostrar a Lista de Adjacência que constitui em uma lista que cada p
 
 ![Lista de Adjacência](ImgTrab1/listaAdj.png)
 
-  * Positivo: Nesse modelo se torna mais viável , pois eu vou armazenar apenas os vizinhos ligados diretamente ao vertice que no maximo serao quatro ( cima , baixo , esquerda , direita) 
+  * Positivo: Nesse modelo se torna mais viável , pois eu vou armazenar apenas os vizinhos ligados diretamente ao vértice que no máximo serão quatro ( cima , baixo , esquerda , direita) 
   * Negativo: Para eu verificar se 2 vértices tem acesso eu teria que percorrer a lista daquela posição ate encontrar o vértice desejado.
+
+## 7. Representação implícita do Grafo Problema 1
+
+* Positivo: é a mais adequada para esse problema porque não precisamos armazenar explicitamente as arestas do grafo, o próprio mapa deixa nos observarmos se há conectividade ou nao. Se observar cada '.' que são nossos      vertices,  eles representam o quadrado do chão  e se olhar para cima, baixo , esquerda e direita você conseguira ver se eles tem conexão se houver outro '.' de encontro , assim demonstrando a possibilidade de andar      entre os dois quadrados no chão. 
