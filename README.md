@@ -102,4 +102,10 @@ Aqui iremos mostrar a Lista de Adjacência que constitui em uma lista que cada p
 
 ## 7. Representação implícita do Grafo Problema 1
 
-* Positivo: é a mais adequada para esse problema porque não precisamos armazenar explicitamente as arestas do grafo, o próprio mapa deixa nos observarmos se há conectividade ou nao. Se observar cada '.' que são nossos      vertices,  eles representam o quadrado do chão  e se olhar para cima, baixo , esquerda e direita você conseguira ver se eles tem conexão se houver outro '.' de encontro , assim demonstrando a possibilidade de andar      entre os dois quadrados no chão. 
+* Positivo: é a mais adequada para esse problema porque não precisamos armazenar explicitamente as arestas do grafo, o próprio mapa deixa nos observarmos se há conectividade ou nao. Se observar cada '.' que são nossos      vertices,  eles representam o quadrado do chão  e se olhar para cima, baixo , esquerda e direita você conseguira ver se eles tem conexão se houver outro '.' de encontro , assim demonstrando a possibilidade de andar      entre os dois quadrados no chão.
+
+  
+## 8. Medidas Estruturais Pertinentes
+
+  * Ordem : 12
+  * Tamanho : 22
