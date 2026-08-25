@@ -79,7 +79,11 @@ Nesta etapa será adicionada uma nova entrada para representar outro mapa como g
 
 Aqui iremos mostrar a Matriz de Adjacência que constitui em uma matriz quadrada que os vértices compõe cada linha e cada coluna, e cada posição Xij representa a conexão/ligação dos respectivos vértices 
 
-![Matriz de Adjacencia](ImgTrab1/MatrizAdjacencia.png)
+![Matriz de Adjacência](ImgTrab1/MatrizAdjacencia.png)
+
+
+  * Positivo: Nesse modelo a matriz de adjacência tem uma facilidade de encontrar se dois vértices possuem ligação, basta consultar M[i,j]. 
+  * Negativo: Se torna inviável visto que o consumo de memoria é muito alto para que o armazenamento da maioria das posições da matriz sejam 0 já que possuem apenas 4 vizinhos no máaximo.
 
 ---
 
@@ -87,4 +91,7 @@ Aqui iremos mostrar a Matriz de Adjacência que constitui em uma matriz quadrada
 
 Aqui iremos mostrar a Lista de Adjacência que constitui em uma lista que cada posição é um vértice do grafo , e em cada posição tem outra lista com todos os outros vértices que fazem conexão diretamente com ele
 
-![Lista de Adjacencia](ImgTrab1/listaAdj.png)
+![Lista de Adjacência](ImgTrab1/listaAdj.png)
+
+  * Positivo: Nesse modelo se torna mais viável , pois eu vou armazenar apenas os vizinhos ligados diretamente ao vertice que no maximo serao quatro ( cima , baixo , esquerda , direita) 
+  * Negativo: Para eu verificar se 2 vértices tem acesso eu teria que percorrer a lista daquela posição ate encontrar o vértice desejado.
