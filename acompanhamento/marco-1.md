@@ -40,20 +40,4 @@ Portanto:
 * **Quantidade de cômodos:** 3
 * **Saída esperada:** `3`
 
----
 
-## 4. Nova Entrada
-
-Nesta etapa será adicionada uma nova entrada para representar outro mapa como grafo e verificar uma nova saída.
-
-### Entrada
-
-```text
-7 10
-##########
-#..#.....#
-#..#..#..#
-####..#..#
-#........#
-#.########
-#........#
