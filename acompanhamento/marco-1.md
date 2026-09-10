@@ -1,1 +1,59 @@
+# Marco 1 — Questão e Modelagem
 
+## 1. Questão
+
+O problema apresenta um mapa de um prédio representado por uma matriz de dimensão `N × M`.
+
+![Questão](../ImgTrab1/printq.png)
+
+A entrada fornece as dimensões da matriz e, em seguida, o mapa, onde cada posição representa chão ou parede.
+
+A saída esperada é um inteiro representando a **quantidade de cômodos existentes no mapa**.
+
+---
+
+## 2. Interpretação e Modelagem
+
+Para transformar o problema em um grafo, interpretamos:
+
+* `.` → representa um espaço de chão e, portanto, um **vértice**.
+* `#` → representa uma parede e não é considerado um vértice.
+* **Aresta** → representa a possibilidade de andar entre dois espaços de chão adjacentes, podendo se movimentar para cima, baixo, esquerda ou direita.
+
+Dessa forma, os espaços de chão conectados entre si formam um **subgrafo**.
+
+Cada subgrafo conectado representa um **cômodo**.
+
+---
+
+## 3. Representação como Grafo
+
+A partir da interpretação do mapa, foi construída a seguinte representação:
+
+![Grafo da questão](../ImgTrab1/grapho1Questao.png)
+
+Na representação existem **3 subgrafos**, ou seja, **3 grupos de vértices que não possuem conexão entre si**.
+
+Portanto:
+
+* **Quantidade de subgrafos:** 3
+* **Quantidade de cômodos:** 3
+* **Saída esperada:** `3`
+
+---
+
+## 4. Nova Entrada
+
+Nesta etapa será adicionada uma nova entrada para representar outro mapa como grafo e verificar uma nova saída.
+
+### Entrada
+
+```text
+7 10
+##########
+#..#.....#
+#..#..#..#
+####..#..#
+#........#
+#.########
+#........#
