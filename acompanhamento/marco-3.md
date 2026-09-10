@@ -1,8 +1,21 @@
-# Marco 3 — Aplicação básica de DFS ## 1. Lista de Adjacência A partir da representação do grafo, foi construída a lista de adjacência dos vértices, a ordem dos vizinhos na lista depende da forma como as arestas são encontradas durante a leitura da matriz. Como a inserção dos vizinhos é realizada no início da lista, o vizinho encontrado mais recentemente fica na primeira posição.Para o vértice 4, caso 3 seja encontrado primeiro e 6 posteriormente, a lista será:
-text
+acompanhamento/marco-3.md
+# Marco 3 — Aplicação Básica de DFS
+
+## 1. Lista de Adjacência
+
+A partir da representação do grafo, foi construída a lista de adjacência dos vértices.
+
+A ordem dos vizinhos na lista depende da forma como as arestas são encontradas durante a leitura da matriz. Como a inserção dos vizinhos é realizada no início da lista, o vizinho encontrado mais recentemente fica na primeira posição.
+
+Para o vértice `4`, caso `3` seja encontrado primeiro e `6` posteriormente, a lista será:
+
+```text
 4 → [6, 3]
-Assim, o DFS seguirá primeiro o vizinho 6 e posteriormente 3. A lista de adjacência utilizada é:
-text
+
+Assim, o DFS seguirá primeiro o vizinho 6 e posteriormente 3.
+
+A lista de adjacência utilizada é:
+
 1  → [2]
 2  → [1]
 
@@ -17,32 +30,46 @@ text
 
 8  → [9]
 9  → [8]
---- ## 2. Execução Manual do DFS O grafo possui três componentes conexos. Portanto, é necessário iniciar um DFS para cada componente ainda não visitado. --- ### DFS 1 — Componente {1, 2} O DFS começa pelo vértice 1.
-text
+2. Execução Manual do DFS
+
+O grafo possui três componentes conexos. Portanto, é necessário iniciar um DFS para cada componente ainda não visitado.
+
+DFS 1 — Componente {1, 2}
+
+O DFS começa pelo vértice 1.
+
 1 → 2
-O vértice 2 possui apenas 1 como vizinho, que já foi visitado. #### Árvore DFS 1
-text
+
+O vértice 2 possui apenas 1 como vizinho, que já foi visitado.
+
+Árvore DFS 1
 1
 |
 2
-#### Predecessores
-text
+Predecessores
 1 → -
 2 → 1
-#### Tempo de Descoberta
-text
+Tempo de Descoberta
 TD: 1 - 2
-#### Tempo de Finalização
-text
+Tempo de Finalização
 TF: 2 - 1
---- ### DFS 2 — Componente {3, 4, 5, 6, 7, 10, 11, 12} O DFS começa pelo vértice 3. A lista de adjacência de 3 é:
-text
+DFS 2 — Componente {3, 4, 5, 6, 7, 10, 11, 12}
+
+O DFS começa pelo vértice 3.
+
+A lista de adjacência de 3 é:
+
 3 → [6, 4]
-Portanto, o primeiro vizinho analisado será 6. A execução ocorre da seguinte forma:
-text
+
+Portanto, o primeiro vizinho analisado será 6.
+
+A execução ocorre da seguinte forma:
+
 3 → 6 → 10 → 11 → 12 → 7 → 5 → 4
-Ao chegar em 4, seus vizinhos já foram visitados, portanto a busca começa a retornar. #### Árvore DFS 2
-text
+
+Ao chegar em 4, seus vizinhos já foram visitados, portanto a busca começa a retornar.
+
+Árvore DFS 2
 3
 |
 6
@@ -58,8 +85,11 @@ text
 5
 |
 4
-A árvore representa as arestas utilizadas pelo DFS para descobrir cada novo vértice. Dessa forma:
-text
+
+A árvore representa as arestas utilizadas pelo DFS para descobrir cada novo vértice.
+
+Dessa forma:
+
 3 descobriu 6
 6 descobriu 10
 10 descobriu 11
@@ -67,8 +97,10 @@ text
 12 descobriu 7
 7 descobriu 5
 5 descobriu 4
-As demais arestas do grafo original não entram na árvore de descoberta quando conectam vértices que já haviam sido visitados. #### Predecessores
-text
+
+As demais arestas do grafo original não entram na árvore de descoberta quando conectam vértices que já haviam sido visitados.
+
+Predecessores
 3  → -
 6  → 3
 10 → 6
@@ -77,32 +109,58 @@ text
 7  → 12
 5  → 7
 4  → 5
-#### Tempo de Descoberta
-text
+Tempo de Descoberta
 TD: 3 - 6 - 10 - 11 - 12 - 7 - 5 - 4
-#### Tempo de Finalização Depois que o DFS chega ao vértice 4, não existem mais vértices novos para explorar. A finalização ocorre durante o retorno da busca:
-text
+Tempo de Finalização
+
+Depois que o DFS chega ao vértice 4, não existem mais vértices novos para explorar. A finalização ocorre durante o retorno da busca:
+
 TF: 4 - 5 - 7 - 12 - 11 - 10 - 6 - 3
---- ### DFS 3 — Componente {8, 9} O DFS começa pelo vértice 8.
-text
+DFS 3 — Componente {8, 9}
+
+O DFS começa pelo vértice 8.
+
 8 → 9
-O vértice 9 possui apenas 8 como vizinho, que já foi visitado. #### Árvore DFS 3
-text
+
+O vértice 9 possui apenas 8 como vizinho, que já foi visitado.
+
+Árvore DFS 3
 8
 |
 9
-#### Predecessores
-text
+Predecessores
 8 → -
 9 → 8
-#### Tempo de Descoberta
-text
+Tempo de Descoberta
 TD: 8 - 9
-#### Tempo de Finalização
-text
+Tempo de Finalização
 TF: 9 - 8
---- ## 3. Estados de Visita e Predecessores A tabela apresenta o estado final dos vértices após a execução dos três DFS. | Vértice | Visitado | Predecessor | |---|---|---| | 1 | true | - | | 2 | true | 1 | | 3 | true | - | | 4 | true | 5 | | 5 | true | 7 | | 6 | true | 3 | | 7 | true | 12 | | 8 | true | - | | 9 | true | 8 | | 10 | true | 6 | | 11 | true | 10 | | 12 | true | 11 | O valor true indica que o vértice foi visitado pelo DFS. O predecessor representa o vértice responsável por descobrir o vértice atual durante a busca. --- ## 4. Alcançabilidade A partir do vértice inicial de cada DFS, todos os vértices pertencentes ao mesmo componente conexo são alcançados.
-text
+3. Estados de Visita e Predecessores
+
+A tabela apresenta o estado final dos vértices após a execução dos três DFS.
+
+Vértice	Visitado	Predecessor
+1	true	-
+2	true	1
+3	true	-
+4	true	5
+5	true	7
+6	true	3
+7	true	12
+8	true	-
+9	true	8
+10	true	6
+11	true	10
+12	true	11
+
+O valor true indica que o vértice foi visitado pelo DFS.
+
+O predecessor representa o vértice responsável por descobrir o vértice atual durante a busca.
+
+4. Alcançabilidade
+
+A partir do vértice inicial de cada DFS, todos os vértices pertencentes ao mesmo componente conexo são alcançados.
+
 DFS 1:
 1 → {1, 2}
 
@@ -111,19 +169,37 @@ DFS 2:
 
 DFS 3:
 8 → {8, 9}
-Não é possível alcançar vértices de outro componente, pois não existem arestas conectando esses componentes. --- ## 5. Aplicabilidade ao Problema O DFS pode ser utilizado para encontrar os componentes conexos do grafo. No problema, cada posição . representa um vértice e as conexões entre posições adjacentes representam as arestas. Ao encontrar um vértice que ainda não foi visitado, um novo DFS é iniciado. Esse DFS visita todos os vértices conectados ao vértice inicial. Assim, cada execução do DFS corresponde a um componente conexo, que representa um cômodo. Neste exemplo foram realizadas três execuções:
-text
+
+Não é possível alcançar vértices de outro componente, pois não existem arestas conectando esses componentes.
+
+5. Aplicabilidade ao Problema
+
+O DFS pode ser utilizado para encontrar os componentes conexos do grafo.
+
+No problema, cada posição . representa um vértice e as conexões entre posições adjacentes representam as arestas.
+
+Ao encontrar um vértice que ainda não foi visitado, um novo DFS é iniciado. Esse DFS visita todos os vértices conectados ao vértice inicial.
+
+Assim, cada execução do DFS corresponde a um componente conexo, que representa um cômodo.
+
+Neste exemplo foram realizadas três execuções:
+
 DFS 1 → {1, 2}
 
 DFS 2 → {3, 4, 5, 6, 7, 10, 11, 12}
 
 DFS 3 → {8, 9}
+
 Portanto:
-text
+
 Quantidade de componentes conexos: 3
 Quantidade de cômodos: 3
---- ## 6. Adaptação do DFS à Representação Implícita Como foi utilizada a representação implícita, não é necessário armazenar explicitamente todas as arestas do grafo. Cada . representa um vértice do grafo. Para encontrar seus possíveis vizinhos, são verificadas as quatro posições adjacentes:
-text
+6. Adaptação do DFS à Representação Implícita
+
+Como foi utilizada a representação implícita, não é necessário armazenar explicitamente todas as arestas do grafo.
+
+Cada . representa um vértice do grafo. Para encontrar seus possíveis vizinhos, são verificadas as quatro posições adjacentes:
+
         cima
           ↑
           |
@@ -131,4 +207,7 @@ esquerda ← . → direita
           |
           ↓
         baixo
-Se a posição analisada também possuir ., existe uma conexão entre os dois vértices. Dessa forma, o DFS pode utilizar diretamente o mapa para descobrir os vizinhos de cada vértice, verificando as quatro direções possíveis.
+
+Se a posição analisada também possuir ., existe uma conexão entre os dois vértices.
+
+Dessa forma, o DFS pode utilizar diretamente o mapa para descobrir os vizinhos de cada vértice, verificando as quatro direções possíveis.
