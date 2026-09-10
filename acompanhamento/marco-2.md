@@ -1,60 +1,56 @@
-
----
-
-# `acompanhamento/marco-2.md`
-
-```markdown
-# Marco 2 — Representação Computacional
+# Marco 2 — Representações do Grafo e Medidas Estruturais
 
 ## 1. Matriz de Adjacência do Grafo Problema 1
 
-A matriz de adjacência consiste em uma matriz quadrada na qual os
-vértices compõem cada linha e cada coluna. Cada posição `X[i][j]`
-representa a conexão/ligação dos respectivos vértices.
+A **matriz de adjacência** é uma matriz quadrada em que as linhas e as colunas representam os vértices do grafo. Cada posição `M[i][j]` indica se existe uma conexão entre os vértices `i` e `j`.
 
 ![Matriz de Adjacência](../ImgTrab1/MatrizAdjacencia.png)
 
-* **Positivo:** Nesse modelo, a matriz de adjacência facilita encontrar
-se dois vértices possuem ligação, basta consultar `M[i][j]`.
+### Vantagem
 
-* **Negativo:** Torna-se inviável visto que o consumo de memória é muito
-alto para o armazenamento da maioria das posições da matriz como `0`,
-já que cada vértice possui no máximo quatro vizinhos.
+* A matriz de adjacência facilita a verificação de uma conexão entre dois vértices, pois basta consultar diretamente a posição `M[i][j]`.
+
+### Desvantagem
+
+* Para este problema, a matriz de adjacência não é uma representação eficiente, pois possui um alto consumo de memória. A maioria das posições da matriz teria valor `0`, já que cada vértice possui no máximo quatro vizinhos.
 
 ---
 
 ## 2. Lista de Adjacência do Grafo Problema 1
 
-A lista de adjacência consiste em uma lista na qual cada posição
-representa um vértice do grafo e, em cada posição, existe outra lista
-com todos os outros vértices que possuem conexão direta com ele.
+A **lista de adjacência** consiste em uma estrutura em que cada posição representa um vértice do grafo e, associada a ela, existe uma lista contendo todos os vértices que possuem conexão direta com ele.
 
 ![Lista de Adjacência](../ImgTrab1/listaAdj.png)
 
-* **Positivo:** Nesse modelo se torna mais viável, pois são armazenados
-apenas os vizinhos ligados diretamente ao vértice, que no máximo serão
-quatro: cima, baixo, esquerda e direita.
+### Vantagem
 
-* **Negativo:** Para verificar se dois vértices possuem acesso, seria
-necessário percorrer a lista daquela posição até encontrar o vértice
-desejado.
+* A lista de adjacência é mais viável para este problema, pois armazena apenas os vizinhos que possuem conexão direta com cada vértice. Como os movimentos possíveis são para cima, baixo, esquerda e direita, cada vértice possui no máximo quatro vizinhos.
+
+### Desvantagem
+
+* Para verificar se dois vértices possuem uma conexão, é necessário percorrer a lista de adjacência do vértice até encontrar o vértice desejado.
 
 ---
 
 ## 3. Representação Implícita do Grafo Problema 1
 
-* **Positivo:** É a mais adequada para esse problema porque não
-precisamos armazenar explicitamente as arestas. O próprio mapa permite
-observar se há conectividade ou não.
+A **representação implícita** é a mais adequada para este problema, pois não é necessário armazenar explicitamente as arestas do grafo.
 
-Se observar cada `.` que representa nossos vértices, eles representam o
-quadrado do chão. Ao olhar para cima, baixo, esquerda e direita, podemos
-verificar se existe conexão caso haja outro `.` de encontro, demonstrando
-a possibilidade de andar entre os dois quadrados no chão.
+O próprio mapa permite identificar os vértices e suas conexões. Cada `.` representa um vértice, correspondente a um espaço de chão. Para verificar se existe uma conexão, basta observar as posições imediatamente acima, abaixo, à esquerda e à direita.
+
+Se uma dessas posições também possuir `.`, significa que existe uma conexão entre os dois espaços.
+
+Dessa forma, o próprio mapa contém as informações necessárias para determinar a conectividade do grafo, sem a necessidade de armazenar uma matriz ou uma lista de todas as arestas.
 
 ---
 
 ## 4. Medidas Estruturais Pertinentes
 
+Para o grafo apresentado, temos:
+
 * **Ordem:** 12
 * **Tamanho:** 22
+
+A **ordem** corresponde à quantidade de vértices presentes no grafo.
+
+O **tamanho** corresponde à quantidade de arestas presentes no grafo.
