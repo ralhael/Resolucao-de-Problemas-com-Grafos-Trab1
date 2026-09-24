@@ -50,7 +50,7 @@ A partir da entrada fornecida, o grafo é dividido em 2 subgrafos conexos ($C_1$
 
 ### Componente Conexa $C_1 = \{1, 2, 3, 4\}$
 
-**Excentricidade de cada vértice :
+**Excentricidade de cada vértice** :
 * $\text{Exc}(V_1) = \max(d(1,2), d(1,3), d(1,4)) = \max(1, 1, 1) = 1$
 * $\text{Exc}(V_2) = \max(d(2,1), d(2,3), d(2,4)) = \max(1, 1, 2) = 2$
 * $\text{Exc}(V_3) = \max(d(3,1), d(3,2), d(3,4)) = \max(1, 1, 1) = 1$
@@ -66,7 +66,7 @@ A partir da entrada fornecida, o grafo é dividido em 2 subgrafos conexos ($C_1$
 
 ### Componente Conexa $C_2 = \{5, 6\}$
 
-**Excentricidade de cada vértice :**
+**Excentricidade de cada vértice** :**
 * $\text{Exc}(V_5) = \max(d(5,6)) = 1$
 * $\text{Exc}(V_6) = \max(d(6,5)) = 1$
 
