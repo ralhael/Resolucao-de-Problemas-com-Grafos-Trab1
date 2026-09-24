@@ -102,21 +102,6 @@ O laço principal varre os vértices e encontra `marked[1] == false`. Incrementa
 8. Consulta lista `[1, 3]`. Ambos já foram visitados.
 9. Ocorre o backtracking, desempilhando e finalizando a busca nos vértices $4 \to 3 \to 2 \to 1$.
 
-#### Árvore DFS 1
-```text
-1 (Equipe 1)
-|
-2 (Equipe 2)
-|
-3 (Equipe 1)
-|
-4 (Equipe 2)
-```
-
-#### Predecessores e Tempos
-* **Predecessores:** $1 \to -$, $2 \to 1$, $3 \to 2$, $4 \to 3$
-* **Tempo de Descoberta (TD):** 1 - 2 - 3 - 4
-* **Tempo de Finalização (TF):** 4 - 3 - 2 - 1
 
 ### Execução Manual — DFS 2 (Componente $C_2$)
 
@@ -128,17 +113,7 @@ O laço principal avança e encontra `marked[5] == false`. Incrementa `count = 2
 4. Consulta lista `[5]`. Já foi visitado.
 5. Ocorre o backtracking, finalizando a busca em $6 \to 5$.
 
-#### Árvore DFS 2
-```text
-5 (Equipe 1)
-|
-6 (Equipe 2)
-```
 
-#### Predecessores e Tempos
-* **Predecessores:** $5 \to -$, $6 \to 5$
-* **Tempo de Descoberta (TD):** 5 - 6
-* **Tempo de Finalização (TF):** 6 - 5
 
 ### Estado Final das Estruturas de Dados
 
