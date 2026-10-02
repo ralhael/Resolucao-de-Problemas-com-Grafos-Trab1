@@ -81,4 +81,4 @@ Considerando um caso com **ciclo ímpar** (não bipartido) com $N = 3$ e $M = 3$
   * Vetor de equipes (`equipe[]`): $\Theta(V)$ inteiros.
   * Pilha explícita (`Stack`): $\mathcal{O}(V)$ no pior caso (grafo em formato de caminho).
   * Iteradores de adjacência: $\Theta(V)$ ponteiros.
-* **Complexidade Total de Memória:** $\mathcal{O}(V + E)$, consumindo cerca de $25 \text{ MB}$, bem abaixo do limite de $512 \text{ MB}$ do CSES.
+
