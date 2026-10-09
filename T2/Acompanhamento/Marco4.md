@@ -155,8 +155,9 @@ public class Main {
     }
 }
 
+```
 
-
+---
 
 ## Explicação dos Pontos Principais
 
@@ -173,3 +174,6 @@ A expressão aritmética `equipe[w] = 3 - equipe[v]` é uma forma simples de alt
 * **Se o vértice atual v pertence à Equipe 2:** `equipe[w] = 3 - 2 = 1` *(o vizinho w vai para a Equipe 1)*
 
 Se durante a navegação o algoritmo encontrar um vizinho `w` que já possui a mesma equipe do vértice atual `v` (`equipe[w] == equipe[v]`), significa que um **ciclo ímpar** foi detectado no grafo. Isso torna a divisão impossível, ativando a flag `impossivel = true`.
+
+
+
